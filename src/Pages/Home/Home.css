@@ -1,0 +1,15 @@
+.home-grid {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.home-title {
+  text-align: center;
+  color: white;
+  font-family: sans-serif;
+  text-transform: uppercase;
+  margin-bottom: 5rem;
+}
