@@ -64,7 +64,9 @@ const Home = () => {
         >
           Page {page + 1}
         </span>
-        <Button onClick={() => setPage(prev => prev + 1)}>Next</Button>
+        <Button disabled={page >= 9} onClick={() => setPage(prev => prev + 1)}>
+          Next
+        </Button>
       </ButtonGroup>
     </div>
   );

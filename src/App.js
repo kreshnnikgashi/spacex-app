@@ -12,7 +12,7 @@ import {
 import { onError } from '@apollo/client/link/error';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './Pages/Home/Home';
-import Details from './Pages/Details/Details';
+import MissionDetails from './components/MissionDetails/MissionDetails';
 
 const errorLink = onError(({ graphqlErrors, networkError }) => {
   if (graphqlErrors) {
@@ -41,7 +41,7 @@ const App = () => {
           <Container>
             <Routes>
               <Route path="/" element={<Home />} />
-              <Route path="/details" element={<Details />} />
+              <Route path="/:id" element={<MissionDetails />} />
             </Routes>
           </Container>
         </div>

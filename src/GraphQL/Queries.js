@@ -14,4 +14,17 @@ export const LOAD_PAST_LAUNCHES = gql`
   }
 `;
 
-export const LOAD_MISSION_DETAILS = 'queries here';
+export const LOAD_ROCKET_DETAILS = gql`
+  query SingleDetails($id: ID!) {
+    launchesPast {
+      mission_name
+      id
+      mission_id
+      rocket(id: $id) {
+        rocket_name
+        rocket_type
+      }
+      details
+    }
+  }
+`;

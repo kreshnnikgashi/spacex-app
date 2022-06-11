@@ -12,7 +12,7 @@ import { useNavigate } from 'react-router-dom';
 
 const unavailable = 'https://via.placeholder.com/300?text=Unavailable';
 
-const SingleContent = ({ name, image, launch_year, article }) => {
+const SingleContent = ({ id, name, image, launch_year, article }) => {
   const navigate = useNavigate();
 
   return (
@@ -20,8 +20,9 @@ const SingleContent = ({ name, image, launch_year, article }) => {
       <Card sx={{ width: 300 }}>
         <CardActionArea
           onClick={() => {
-            navigate('/details');
+            navigate(`/${id}`);
           }}
+          key={id}
         >
           <CardMedia
             component="img"
